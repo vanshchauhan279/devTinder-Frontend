@@ -5,7 +5,7 @@ import Body from "./components/Body";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
 import Feed from "./components/Feed";
-import Logout from "./components/Logout"
+
 
 
 function App() {
