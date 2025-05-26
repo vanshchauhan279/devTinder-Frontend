@@ -31,7 +31,7 @@ const Body = () => {
     if (!user) {
       getUser();
     }
-  }, []);
+  });
 
   return (
     <>
