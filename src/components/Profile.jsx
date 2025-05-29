@@ -3,18 +3,23 @@ import { useSelector } from "react-redux";
 
 import EditProfile from "./EditProfile";
 
+
 const Profile = () => {
   const user = useSelector((appStore) => appStore.user);
 
+   
+ if (!user) {
+    return null; // Or <div>Loading...</div>
+  }
   return (
     <div className="flex">
     <div className="mt-10 w-full">
       <div className="flex items-center justify-around">
-        <img
+        {user.photoUrl && (<img
           className="rounded-full w-52 p-5 ml-10"
-          src={user.photoUrl}
+          src={user.photoUrl }
           alt="user photo"
-        />
+        />)}
         <h1 className="font-bold  text-7xl text-green-600">{user.firstName}</h1>
       </div>
       <div className="flex justify-center mr-16">

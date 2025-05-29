@@ -24,7 +24,7 @@ const Login = () => {
           withCredentials: true,
         }
       );
-
+         console.log(res.data)
       dispatch(addUser(res.data));
       navigate("/");
     } catch (err) {
@@ -57,15 +57,26 @@ const Login = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
             <p className="text-red-500">{error}</p>
-            <button
-              className="btn btn-primary w-20 btn-sm mt-8 items-center"
-              onClick={handleLogin}
-            >
-              login
-            </button>
+            <div className="flex justify-between">
+              <button
+                className="btn btn-primary w-20 btn-sm mt-8 items-center"
+                onClick={handleLogin}
+              >
+                login
+              </button>
+            </div>
           </fieldset>
         </div>
       </div>
+      <p
+        className="p-3 mb-2 mx-auto"
+        onClick={() => {
+          navigate("/signUp");
+        }}
+      >
+        {" "}
+        ForSignup , Click here
+      </p>
     </div>
   );
 };

@@ -22,7 +22,9 @@ const Feed = () => {
   useEffect(() => {
     getFeed();
   }, []);
-
+ if(!feed || feed.length===0){
+  return <h1>No more user</h1>
+ }
   return (
     feed && (
       <div>

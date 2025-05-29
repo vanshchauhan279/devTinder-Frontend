@@ -42,10 +42,10 @@ catch(err){
   };
 
   return (
-    <div className="card bg-neutral text-neutral-content w-96  mt-12 rounded-3xl h-auto">
-      <div className="card-body items-center ">
-        <h2 className="card-title mb-5">Edit Profile!</h2>
-        <div className="card-actions justify-end">
+    <div className=" bg-neutral text-neutral-content w-auto  mt-12 rounded-3xl h-auto  min-h-0 mb-10 ">
+      <div className="p-5 items-center ">
+        <h2 className="text-2xl mb-5">Edit Profile!</h2>
+        <div className=" justify-end">
           <fieldset className="fieldset">
             <legend className="fieldset-legend text-white text-sm">
               First Name
