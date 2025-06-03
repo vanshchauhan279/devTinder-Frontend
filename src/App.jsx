@@ -16,13 +16,13 @@ function App() {
      <BrowserRouter>
         <Routes>
         <Route path="/" element={<Body />}>   
-          <Route path="/" element={<Feed/>}/>  
-          <Route path="/login" element={<Login />} />
+          <Route index element={<Feed />} />   
+          <Route path="login" element={<Login />} />
           <Route path="profile" element={<Profile />} />    
           <Route path="profile/edit" element={<EditProfile/>}/>
           <Route path="connections" element={<Connections/>}/>
           <Route path="requests" element={<Requests/>}/>
-          <Route path="/signUp" element={<SignUp/>}/>
+          <Route path="signUp" element={<SignUp/>}/>
         </Route>
         </Routes>
       </BrowserRouter>
