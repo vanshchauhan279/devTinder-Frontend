@@ -32,8 +32,9 @@ const EditProfile = () => {
     }
       }
     );
-    dispatch(addUser(res.data.data))
-    console.log(res)
+    console.log(res)  
+    dispatch(addUser(res?.data?.data))
+    
     // console.log(gender)
 }
 catch(err){
