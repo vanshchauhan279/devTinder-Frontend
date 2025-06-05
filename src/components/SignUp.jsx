@@ -32,7 +32,9 @@ const SignUp = () => {
       console.log(res?.data);
       dispatch(addUser(res?.data))
 
-      navigate("/profile");
+      setTimeout(() => {
+  navigate("/profile/view");
+}, 100);
 
     } catch (err) {
       setError(err.message);

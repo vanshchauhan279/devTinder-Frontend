@@ -6,8 +6,6 @@ import { removeFromFeed } from "../utils/userFeed";
 const UserCard = ({ user }) => {
   const dispatch = useDispatch(); //data.data.connection._id
 
- 
-
   const { firstName, lastName, photoUrl, gender, skills } = user;
 
   console.log(user);
@@ -36,7 +34,7 @@ const UserCard = ({ user }) => {
           <h2 className="card-title">{firstName + " " + lastName}</h2>
           <h2 className="card-title">{gender}</h2>
         </div>
-        <p>{skills.join(" ")}</p>
+        <p>{skills?.length ? skills.join(", ") : "No skills listed"}</p>
         <div className="card-actions justify-center mt-4">
           <button
             className="btn btn-primary"

@@ -42,7 +42,7 @@ const Profile = () => {
           </li>
           <li className="mb-5">
             <span className="text-blue-500 font-semibold">Skills - </span>
-            <span className="text-black">{user.skills.join(", ")}</span>
+            <span className="text-black">{user?.skills?.length > 0 ? user.skills.join(", ") : "No skills listed"}</span>
           </li>
         </ul>
       </div>

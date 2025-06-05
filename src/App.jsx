@@ -16,15 +16,15 @@ function App() {
      <BrowserRouter>
         <Routes>
         <Route path="/" element={<Body />}>   
-          <Route index element={<Feed />} />   
-          <Route path="login" element={<Login />} />
-          <Route path="profile" element={<Profile />} />    
-          <Route path="profile/edit" element={<EditProfile/>}/>
+          <Route index element={<Feed />} />         
+          <Route path="profile/view" element={<Profile />} />    
           <Route path="connections" element={<Connections/>}/>
-          <Route path="requests" element={<Requests/>}/>
-          <Route path="signUp" element={<SignUp/>}/>
+          <Route path="requests" element={<Requests/>}/>    
+           <Route path="login" element={<Login />} />
+          <Route path="signUp" element={<SignUp/>}/>   
         </Route>
         </Routes>
+  
       </BrowserRouter>
   )
 }

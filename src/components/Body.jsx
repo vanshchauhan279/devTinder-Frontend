@@ -28,8 +28,8 @@ const Body = () => {
   };
 
   useEffect(() => {
-    if (!user) {
-      getUser();
+    if(user){
+        getUser(); 
     }
   },[]);
 
