@@ -30,12 +30,11 @@ const SignUp = () => {
         }
       );
       console.log(res?.data);
-      dispatch(addUser(res?.data))
+      dispatch(addUser(res?.data));
 
       setTimeout(() => {
-  navigate("/profile/view");
-}, 100);
-
+        navigate("/profile/view");
+      }, 100);
     } catch (err) {
       setError(err.message);
       setErrStatus(err.status);
@@ -123,12 +122,14 @@ const SignUp = () => {
             </fieldset>
             <button
               className="btn btn-active btn-success my-3"
-              onClick={()=>handleSignUp()}
+              onClick={() => handleSignUp()}
             >
               Success
             </button>
 
-            <p onClick={()=>navigate("/login")}>if already account , CLick here</p>
+            <p onClick={() => navigate("/login")}>
+              if already account , CLick here
+            </p>
           </div>
         </div>
       </div>

@@ -6,9 +6,9 @@ import EditProfile from "./EditProfile";
 
 const Profile = () => {
   const user = useSelector((appStore) => appStore.user);
-
    
  if (!user) {
+  <h1><div>Loading...</div></h1>
     return null; // Or <div>Loading...</div>
   }
   return (
