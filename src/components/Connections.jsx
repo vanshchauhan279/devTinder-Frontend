@@ -3,6 +3,7 @@ import { BASE_URL } from "../utils/constants";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addConnection } from "../utils/connectionSlice";
+import { Link } from "react-router-dom";
 
 const Connections = () => {
   const dispatch = useDispatch();
@@ -26,9 +27,9 @@ const Connections = () => {
   };
   useEffect(() => {
     fetchConnection();
-  },[]);
+  }, []);
 
-    if (!getConnections || getConnections.length === 0) {
+  if (!getConnections || getConnections.length === 0) {
     return <h1 className="text-2xl m-4">No Connection Found </h1>;
   }
   return (
@@ -36,11 +37,26 @@ const Connections = () => {
       <h1 className="text-5xl mb-10 font-bold text-center">Connections</h1>
       <div>
         {getConnections.map((connection) => (
-          <div key={connection?._id} className="p-3 bg-gray-300 flex justify-between items-center mb-4 rounded-sm">
-            <img className="w-28 rounded-lg" src={connection?.photoUrl} alt="photo" />
+          <div
+            key={connection?._id}
+            className="p-3 bg-gray-300 flex justify-between items-center mb-4 rounded-sm"
+          >
+            <img
+              className="w-28 rounded-lg"
+              src={connection?.photoUrl}
+              alt="photo"
+            />
             <div className="mr-5">
-            <h2 className="text-2xl mb-3 font-bold">{connection?.firstName + " " + connection?.lastName}</h2>
-            <h2>{connection?.skills.join(", ")}</h2>
+              <h2 className="text-2xl mb-3 font-bold">
+                {connection?.firstName + " " + connection?.lastName}
+              </h2>
+              <h2>{connection?.skills.join(", ")}</h2>
+               <Link to={`/chat/:${connection._id}`}>
+                {" "}
+                <button className="p-2 border-blue-600 bg-blue-600 px-10 rounded-lg text-xl text-white mt-2">
+                  Chat
+                </button>
+              </Link>
             </div>
           </div>
         ))}

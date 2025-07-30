@@ -18,7 +18,7 @@ const Login = () => {
         BASE_URL + "/login",
         {
           email,
-          password,
+          password, 
         },
         {
           withCredentials: true,

@@ -8,7 +8,7 @@ const UserCard = ({ user }) => {
 
   const { firstName, lastName, photoUrl, gender, skills } = user;
 
-  console.log(user);
+ 
   const handleLike = async (status, _id) => {
     try {
       const res = await axios.post(
